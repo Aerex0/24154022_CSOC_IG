@@ -71,7 +71,7 @@ def compute_gradient(x,y,w,b):
 
 
 
-J_hist_pure= []
+J_hist_pure= [] # data storing in json (plot ..)
 
 def gradient_descent(x_train, y_train, w_in, b_in, cost_function, gradient_function, alpha, num_iters):
     w = w_in[:]
@@ -110,7 +110,7 @@ def gradient_descent(x_train, y_train, w_in, b_in, cost_function, gradient_funct
 # y_val = [val / 1000 for val in y_val]
 
 
-# Start the pure pthon  training
+# the pure pthon  training-------------------------
 alpha = 0.005
 iterations = 1500
 
