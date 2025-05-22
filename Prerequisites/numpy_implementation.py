@@ -33,7 +33,9 @@ def prediction(x,w,b):
 
 def compute_cost(X, y, w, b):
     m = X.shape[0]
+    
     y_pred = np.dot(X, w) + b
+    
     cost = np.mean((y_pred - y) ** 2) / 2
     return cost
 
@@ -42,15 +44,17 @@ def compute_cost(X, y, w, b):
 
 def compute_gradient(X, y, w, b):
     m = X.shape[0]
+    
     y_pred = np.dot(X, w) + b
     error = y_pred - y
+    
     dj_dw = (1/m) * np.dot(X.T, error)
     dj_db = (1/m) * np.sum(error)
     return dj_dw, dj_db
 
 
 
-J_hist_numpy = []
+J_hist_numpy = [] # plot (json )
 
 def gradient_descent(x_train, y_train, w_in, b_in, cost_function, gradient_function, alpha, num_iters):
 
@@ -88,7 +92,7 @@ def gradient_descent(x_train, y_train, w_in, b_in, cost_function, gradient_funct
 # y_val = [val / 1000 for val in y_val]
 
 
-# Start training
+# Start training np------------------------------------
 alpha = 0.005
 iterations = 1500
 
